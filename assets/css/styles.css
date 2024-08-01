@@ -1,7 +1,5 @@
 /* Base styles */
 /* Background image styles */
-
-
 body {
     font-family: 'Quicksand', sans-serif;
     color: #333;
@@ -164,9 +162,6 @@ h2 {
     opacity: 1;
 }
 
-
-
-
 /* Skills section styles */
 #skills {
     padding: 2rem 0;
@@ -217,7 +212,6 @@ h2 {
     line-height: 1.5;
 }
 
-
 /* Footer styles */
 footer {
     background: #fff;
@@ -229,43 +223,41 @@ footer {
     bottom: 0;
 }
 
-/* About Me section styles */
+/* General About Section styles */
 #about {
-    padding: 60% auto 0;
+    padding: 2rem 0;
     text-align: center;
 }
 
+/* About Card */
 .about-card {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 16px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     padding: 1rem;
     margin: 1rem auto;
-    width: 90%;
+    width: 80%;
     max-width: 800px;
     cursor: pointer;
-    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+    overflow: auto;
+    height: 250px;
 }
 
-.about-card h3 {
-    margin: 0;
-    font-family: 'Raleway', sans-serif;
-    color: #333;
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
 }
 
-.about-card p {
-    color: #555;
-    line-height: 1.5;
-}
-
+/* Hide the about details initially */
 .about-details {
     display: none;
-    margin-top: 1rem;
 }
 
-.about-card:hover .about-details {
-    display: block; /* Optional: If you want to show details on hover */
+.about-card.expanded .about-details {
+    display: block;
+    text-align: left; /* Left-align the expanded content */
 }
 
 /* Banner Section styles */
@@ -338,4 +330,77 @@ footer {
     font-family: 'Georgia', serif;
     font-size: 1.5rem;
     color: #00ab6c;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        background: none; /* Remove background image on smaller screens */
+    }
+
+    header {
+        padding: 0.5rem 0; /* Reduce padding */
+    }
+
+
+    nav ul {
+        flex-wrap: nowrap;
+        overflow-x: auto; /* Allow horizontal scrolling if necessary */
+        justify-content: center; /* Align items to the start */
+    }
+
+    nav ul li {
+        margin: 0 5px; /* Reduce margin between items */
+    }
+    
+
+
+    main {
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 10px;
+    }
+
+    .project-card, .about-card, .contact-card {
+        width: 100%;
+        max-width: none; /* Remove max-width */
+        margin: 10px 0; /* Adjust margins */
+    }
+
+    .project-card img.project-image {
+        height: auto; /* Adjust image height */
+    }
+
+    .skill-card {
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    #banner img {
+        height: auto; /* Maintain aspect ratio on smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 0.5rem 0; /* Further reduce padding */
+    }
+
+    .project-card, .about-card, .contact-card {
+        padding: 0.5rem; /* Adjust padding */
+    }
+
+    .project-card img.project-image {
+        height: 150px; /* Adjust image height for very small screens */
+    }
+
+    .skill-card {
+        width: 100%;
+        margin: 10px 0; /* Adjust margins */
+    }
+
+    #banner img {
+        height: 100px; /* Adjust banner image height */
+    }
 }
