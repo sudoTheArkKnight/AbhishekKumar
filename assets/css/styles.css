@@ -14,17 +14,22 @@ body {
 header {
     background: #fff;
     padding: 1rem 0;
-    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd;
     position: fixed;
-    width: 100%;
-    top: 0;
+    width: 55%;
+    bottom: 1rem;
     z-index: 1000;
+    display: flex;
+    justify-content: center;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    border-radius: 40px ;
 }
-
 nav ul {
     list-style: none;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly; /* Space evenly */
     padding: 0;
     margin: 0;
 }
@@ -36,8 +41,9 @@ nav ul li {
 nav ul li a {
     text-decoration: none;
     color: #333;
-    font-family: 'Raleway', sans-serif;
-    font-weight: bold;
+    font-family: "Kode Mono", monospace;
+    font-weight: 900;
+    font-style: normal;
     padding: 0.5rem 1rem;
 }
 
@@ -48,17 +54,41 @@ nav ul li a:hover {
 
 /* Main content styles */
 main {
-    margin-top: 30px;
-    padding: 20px;
-    max-width: 60%;
-    margin: 60px auto 0;
-    background: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    margin-top: 10px;
+    padding: 3%;
+    max-width: 90%;
+    margin: 3% auto 0;
+    background: rgba(0, 0, 0, 0.4); /* Transparent frosted background */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 18px;
+    backdrop-filter: blur(10px); /* Add blur effect */
+    overflow: auto;
+    height: 90%;
+    max-height: 38rem;
 }
 
 section {
     margin-bottom: 2rem;
+}
+
+#founder{
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    color: #A9D9D0;
+    font-size: 1.6rem;
+    text-align: center;
+}
+
+#roles{
+    font-family: "Kode Mono", monospace;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.2rem;
+    text-align: center;
+    color: #A9D9D0;
 }
 
 /* Typography */
@@ -84,8 +114,16 @@ h2 {
     text-align: center;
 }
 
+#projects h2{
+    font-family: "Major Mono Display", monospace;
+    font-weight: 500;
+    font-style: normal;
+    color: #A9D9D0;
+    font-size: 2.2rem;
+}
+
 .project-card {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.5); /* Transparent frosted background */
     border: 1px solid #ddd;
     border-radius: 16px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Darker shadow */
@@ -97,6 +135,23 @@ h2 {
     position: relative;
     transition: transform 0.3s, box-shadow 0.3s; /* Animation for transform and shadow */
     text-align: left; /* Left-align text inside the card */
+}
+
+#project-github{
+    font-family: "Merienda", cursive;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    color: #027373;
+    font-size: 1.2rem;
+}
+
+#project-heading{
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.4rem;
+    color: #027373;
 }
 
 .project-card .image-container {
@@ -168,6 +223,14 @@ h2 {
     text-align: center;
 }
 
+#skills-heading{
+    font-family: "Major Mono Display", monospace;
+    font-weight: 500;
+    font-style: normal;
+    color: #A9D9D0;
+    font-size: 2.2rem;
+}
+
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -212,6 +275,37 @@ h2 {
     line-height: 1.5;
 }
 
+/* technologies */
+
+.technologies {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2%;
+}
+
+.tech-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 1%;
+}
+
+.tech-card p{
+    margin-left: 1%;
+    margin-right: 1%;
+}
+
+.tech-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
 /* Footer styles */
 footer {
     background: #fff;
@@ -229,20 +323,29 @@ footer {
     text-align: center;
 }
 
+#about h2{
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.2rem;
+    color: #A9D9D0;
+}
+
 /* About Card */
 .about-card {
-    background: #fff;
+    background: rgba(255, 255, 255, 0.5); /* Transparent frosted background */
     border: 1px solid #ddd;
     border-radius: 16px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     padding: 1rem;
     margin: 1rem auto;
     width: 80%;
-    max-width: 800px;
+    max-width: 100%;
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
     overflow: auto;
-    height: 250px;
+    height: auto;
+    backdrop-filter: blur(10px); /* Add blur effect */
 }
 
 .about-card:hover {
@@ -260,22 +363,40 @@ footer {
     text-align: left; /* Left-align the expanded content */
 }
 
-/* Banner Section styles */
-#banner {
-    width: 100%;
-    overflow: hidden; /* Ensures no overflow from the image */
+.about-card h3{
+    font-family: "Play", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 1.6rem;
 }
 
-#banner img {
-    width: 100%;
-    height: auto; /* Keeps the aspect ratio of the image */
-    display: block; /* Removes the gap below the image */
+/* Banner Section styles */
+#banner {
+    /* display: flex; */
+    width: 80%;
+    overflow: hidden;
+    margin-left: 0;
+    margin-right: 0;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    display: block;
 }
 
 /* General Contact Section styles */
 #contact {
     padding: 2rem auto 0;
     text-align: center;
+}
+
+#contact-heading{
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.2rem;
+    color: #A9D9D0;
 }
 
 /* Container for Contact Cards */
@@ -296,7 +417,7 @@ footer {
     margin: 1rem;
     width: 200px; /* Adjust the width as needed */
     cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s
 }
 
 .contact-card:hover {
@@ -342,7 +463,6 @@ footer {
         padding: 0.5rem 0; /* Reduce padding */
     }
 
-
     nav ul {
         flex-wrap: nowrap;
         overflow-x: auto; /* Allow horizontal scrolling if necessary */
@@ -352,8 +472,6 @@ footer {
     nav ul li {
         margin: 0 5px; /* Reduce margin between items */
     }
-    
-
 
     main {
         max-width: 90%;
@@ -405,11 +523,18 @@ footer {
     }
 }
 
-
 /* Certifications Section styles */
 #certifications {
     padding: 2rem 0;
     text-align: center;
+}
+
+#cert-heading{
+    font-family: "Major Mono Display", monospace;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2.2rem;
+    color: #A9D9D0;
 }
 
 .certifications-container {
