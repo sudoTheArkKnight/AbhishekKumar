@@ -296,9 +296,10 @@ h2 {
     margin: 1%;
 }
 
-.tech-card p{
-    margin-left: 1%;
+.tech-card ul{
+    margin-left: 5%;
     margin-right: 1%;
+    text-align: left;
 }
 
 .tech-card:hover {
@@ -452,6 +453,8 @@ footer {
     font-size: 1.5rem;
     color: #00ab6c;
 }
+
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
