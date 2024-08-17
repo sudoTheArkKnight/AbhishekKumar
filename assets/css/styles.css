@@ -64,7 +64,7 @@ main {
     backdrop-filter: blur(10px); /* Add blur effect */
     overflow: auto;
     height: 90%;
-    max-height: 38rem;
+    max-height: 50rem;
 }
 
 section {
